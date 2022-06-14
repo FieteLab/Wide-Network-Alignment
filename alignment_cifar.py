@@ -6,6 +6,7 @@ from setup_cifar import CIFAR
 import numpy as np
 import pickle
 import sys
+import os
 
 part = 1
 
@@ -14,12 +15,13 @@ if len(sys.argv) > 1:
 
 
 def save(data, name):
-    with open('networks/' + str(name) + '.pkl', 'wb') as file:
+    os.makedirs('outputs', exist_ok=True)
+    with open('outputs/' + str(name) + '.pkl', 'wb') as file:
         pickle.dump(data, file)
 
 
 def load(name):
-    with open('networks/' + str(name) + '.pkl', 'rb') as file:
+    with open('outputs/' + str(name) + '.pkl', 'rb') as file:
         return pickle.load(file)
 
 
