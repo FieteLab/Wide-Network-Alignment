@@ -70,3 +70,14 @@ For ImageNet and Add task experiments, replace `<number>` to run all experiments
 `train_*.py` contain code to train networks with Align methods and baselines on the Add task, CIFAR-10, KMNIST and ImageNet.
 
 `outputs/` will contain parameters of networks necessary to compute alignment scores.
+
+## Citation
+If you find this work useful, we would appreciate if you could cite our paper:
+```
+@inproceedings{boopathy2022how,
+    author = {Boopathy, Akhilan and Fiete, Ila},
+    title = {How to Train Your Wide Neural Network Without Backprop: An Input-Weight Alignment Perspective},
+    booktitle = {ICML},
+    year = {2022},
+}   
+```
