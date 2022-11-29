@@ -227,6 +227,7 @@ def train(name, params, inputs, labels, lr, x_train, x_test, y_train, y_test, ep
         step = 0
         np.random.seed(99)
         param_vals = sess.run(params)
+        save(param_vals, name + '_0')
         for epoch in range(epochs):
             print('Epoch: ' + str(epoch))
             indices = np.random.permutation(x_train.shape[0])
